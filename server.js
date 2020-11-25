@@ -19,14 +19,6 @@ const app = http.createServer(function(request,response){
     //read
     if(pathname == '/'){
         if(queryData.id === undefined){
-                // fs.readFile(__dirname + '/public/css/style.css','utf8', function (err, data) {
-                // fs.readdir('./data',(err, filelist) => {
-                //     let list = template.list(filelist);
-                //     let html = template.html(data, list);
-                //     response.writeHead(200);
-                //     response.end(html);
-                // });
-            // });
             fs.readFile(__dirname + '/public/css/style.css','utf8', function (err, data) {
                 db.query('select * from todo',(err, result) => {
                     if(err) throw err;
