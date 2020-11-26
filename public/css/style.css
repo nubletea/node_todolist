@@ -3,14 +3,47 @@ body{margin:0;padding:0;height:100%;display:flex;justify-content: center;align-i
 .container{
     border:1px solid #000;
     width:500px;
+    padding:10px;
 }
 ul{
     list-style: none;
     margin:0;
     padding:0;
 }
+/* create */
+.create{
+    position: relative;
+}
+.create input[type=submit]{
+    position: absolute;
+    right:0px;
+    top:-.25rem;
+    padding:.5rem;
+    border:none;
+    transition: .5s;
+    border:1px solid #ddd;
+    background:#fff;
+}
+.create input[type=submit]:hover{
+    background:#aaa;
+}
+/* list-li */
+.list li{
+    position: relative;
+    height:3rem;
+    line-height: 3rem;
+}
+.list li span.active{
+    text-decoration:line-through;
+    color:#ddd;
+}
 /* delete */
 .delete{
-    
+    position: absolute;    
     display:inline;
+    right:0;
+}
+.delete input[type=submit]{
+    background:#fff;
+    border:none;
 }
